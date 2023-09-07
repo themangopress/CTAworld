@@ -1,0 +1,2409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Calendar</title>
+    <meta name="description" />
+    <link rel="canonical" href="https://www.wcaworld.com/Events" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="rating" content="General" />
+    <meta name="author" content="WCAworld Team" />
+    <meta property="og:url" content="https://www.wcaworld.com/Events" />
+    <meta property="og:site_name" content="WCAworld" />
+    <meta property="og:image" content="https://www.wcaworld.com/Assets/images/logo_wcaworld.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="distribution" content="Global" />
+    <meta name="copyright" content="wcaworld.com" />
+    <meta name="language" content="" />
+    <meta name="doc-type" content="article" />
+    <meta name="doc-class" content="Completed" />
+    <meta name="doc-rights" content="Copywritten Work" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.typekit.net/sgp6uzx.css" />
+    <link type="text/css" rel="stylesheet" href="/static/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 Days" />
+    <link type="text/css" rel="stylesheet" href="/Assets/css/wca.layout.min.css" />
+    <script type="text/javascript" src="/Assets/js/scripts.all.min.js"></script>
+    <script type="text/javascript" src="/Assets/js/site.min.js"></script>
+    <script type="text/javascript" src="/static/lib/browser-unsupported/browser-unsupported.min.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper">
+
+
+
+        <style>
+            .hoverable:not(:hover)+.show-on-hover {
+                display: none;
+            }
+
+            .show-on-hover {
+                float: left;
+                position: absolute;
+                right: -10px;
+                top: 100%;
+                width: 250px;
+                background: #e6f6f9;
+                z-index: 99999;
+                padding: 10px;
+                text-align: left;
+                color: #23b6d1;
+                font-size: 1.1em;
+                border: 1px solid #23b6d1;
+            }
+
+            .show-on-hover .entry {
+                margin-bottom: 5px;
+                font-size: .8em;
+                display: inline-block;
+                width: 100% !important;
+            }
+
+            .show-on-hover .entry:not(:first-child)::before {
+                content: " " !important
+            }
+        </style>
+        <div id="wrapper_top">
+            <div id="logo_wrapper" class="col-md-2 col-xs-12 col-md-offset-1">
+                <a href="/Home" id="navbar-brand-logo">
+                    <img src="/Assets/images/logo_wcaworld.png" class="img-responsive"
+                        alt="WCA | Leading the World in Logistics Partnering">
+                </a>
+            </div>
+
+            <div id="navright_wrapper" class="">
+                <div id="navright">
+                    <div class="link_joinus entry">
+                        <a href="/Application" style="font-weight:bold; font-size:18px">JOIN US</a>
+                    </div>
+
+                    <div class="link_login entry">
+                        <a href="/Account/Login?ReturnUrl=/MemberSection" class="hoverable"
+                            style="font-weight:bold;font-size:18px">SIGN IN</a>
+                        <span class="show-on-hover">
+                            <span class="entry">&bull; Application</span>
+                            <span class="entry">&bull; Modify Company details</span>
+                            <span class="entry">&bull; Customer Service</span>
+                            <span class="entry">&bull; Gold Medallion Plan</span>
+                            <span class="entry">&bull; Payment Options</span>
+                            <span class="entry">&bull; Suspended Member</span>
+                            <span class="entry">&bull; Member Download</span>
+                            <span class="entry">&bull; Risk Management</span>
+                            <span class="entry">&bull; Broadcast</span>
+                            <span class="entry">&bull; Insurance</span>
+                            <span class="entry">&bull; All World Shipping (AWS)</span>
+                            <span class="entry">&bull; Business Forms </span>
+                            <span class="entry">&bull; One-on-One Meetings </span>
+                        </span>
+                    </div>
+
+                    <div class="link_lang entry">
+                        <div id="lang_top" style="font-weight:bold;">
+                            <div class="activeLanguage">EN</div> <span class="caret"></span>
+                            <form id="selectLanguage" action="/Home/SetLanguage" method="post" class="form-horizontal"
+                                role="form">
+                                <select class="selectBox" name="culture"
+                                    id="requestCulture_RequestCulture_UICulture_Name">
+                                    <option value="en-US" selected>EN</option>
+                                    <option value="zh-Hans">中文</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="col-md-12x text-centerx"
+                style="margin: 0 0 10px;position: absolute;width: 100%;text-align: center;top: 25px;">
+                <a href="/static/downloads/benefits/WCABenefits2023.pdf" class="benefitbrochure_btn"
+                    style="display:inline-block;font-weight:bold;font-size:20px;color:red" title="WCAworld Benefits"
+                    target="_blank">
+                    WCAworld Benefits click here
+                </a>
+            </div>
+
+            <div id="nav_wrapper" class="col-md-8 col-xs-12">
+                <nav class="navbar navbar-default navbar-static-top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/Home" id="navbar-brand-logo"><img
+                                src="/Assets/images/logo_wcaworld_smaller.png" alt=""></a>
+
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="mainmenu_entry entry_1 "><a href="/index.html">Home</a></li>
+                            <li class="mainmenu_entry entry_2 "><a href="/About.html">About</a></li>
+                            <li class="dropdown mainmenu_entry entry_3 ">
+                                <a href="#" class="dropdown-toggle mainemenu_parent" data-toggle="dropdown"
+                                    role="button" aria-expanded="false">
+                                    Our Networks <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class=""><a href="/Networks/GeneralNetworks">General Networks</a></li>
+                                    <li class=""><a href="/Networks/SpecialtyNetworks">Specialty Networks</a></li>
+                                    <!--li class=""><a href="/Networks/AffiliatedNetworks">Affiliated Networks</a></li-->
+                                    <li class=""><a href="/Networks/eCommerceNetworks">eCommerce Network</a></li>
+                                    <li class=""><a href="/Networks/VendorsNetworks">Vendors Network</a></li>
+                                    <li class=""><a href="/Networks/CourierNetworks">Courier Network</a></li>
+                                    <li class=""><a href="/Networks/ParcelNetworks">Parcel Network</a></li>
+                                </ul>
+                            </li>
+                            <li class="mainmenu_entry entry_3 dropdown ">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Benefits <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu span10">
+                                    <li class=""><a href="/Video/WCAwoldBenefits" target="_blank">Overview</a></li>
+                                    <li class=""><a href="/Benefits/GlobalReach">Global Reach</a></li>
+                                    <li class=""><a href="/Benefits/ConferencesEvent">Networking Events</a></li>
+                                    <li class=""><a href="/Benefits/FinancialProtection">Financial Protection</a></li>
+                                    <li class=""><a href="/Benefits/PartnerPay">PartnerPay</a></li>
+                                    <li class=""><a href="/Benefits/MarketingPromotion">Marketing and Promotion</a></li>
+                                    <li class=""><a href="/Benefits/CustomerService">Customer Service</a></li>
+                                    <li class=""><a href="/Benefits/Insurance">WCAworld Insurance</a></li>
+                                    <li class=""><a href="/Benefits/AWS">All World Shipping (AWS)</a></li>
+                                    <li class=""><a href="/Benefits/Courier">Courier Program</a></li>
+
+                                    <li class=""><a href="/Benefits/FreightOscope">FreightOscope</a></li>
+                                    <li class=""><a href="/Benefits/WCAAcademy">WCAworld Academy</a></li>
+                                    <li class=""><a href="/Benefits/WCAworldQuotation">WCAworld Quotation System</a>
+                                    </li>
+                                    <li class=""><a href="/Benefits/WCAworldICE">WCAworld ICE</a></li>
+                                    <li class=""><a href="/Benefits/WCAworldFX">WCAworld FX</a></li>
+                                    <li class=""><a href="/Benefits/ECOProgram">ECO Program</a></li>
+                                    <li class=""><a href="/Benefits/VoiceofTheIndependent">Voice of The Independent</a>
+                                    </li>
+                                    <li class="dropdown ">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<span
+                                                class="caret"></span></a>
+                                        <ul class="dropdown-menu span10">
+                                            <li class=""><a href="/ResourceCenter" target="_blank">Resource Center</a>
+                                            </li>
+                                            <li><a href="http://www.freightdeadbeats.com" target="_blank">Freight
+                                                    Deadbeats</a></li>
+                                            <li><a href="http://www.intuitivelogisticresources.com"
+                                                    target="_blank">Intuitive Logistic Resources</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mainemenu_benefit"><a
+                                            href="/static/downloads/benefits/WCABenefits2023.pdf"
+                                            target="_blank">Download WCAworld Benefits</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="mainmenu_entry entry_6 ">
+                                <a class="mainemenu_parent" href="/Directory.html">Directory</a>
+                            </li>
+                            <li class="mainmenu_entry entry_7  active">
+                                <a class="mainemenu_parent" href="/Events.html">Events &amp; Gallery</a>
+                            </li>
+
+                            <li class="mainmenu_entry entry_8 dropdown ">
+                                <a href="#" class="dropdown-toggle mainemenu_parent" data-toggle="dropdown"
+                                    role="button" aria-expanded="false">
+                                    Contact <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class=""><a href="/Contact/Staff">WCAworld Staff</a></li>
+                                    <li class=""><a href="/Contact/Regions">Regional Service Centers</a></li>
+                                    <li><a href="mailto:info@wcaworld.com">Email WCAworld</a></li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="wrapper_content">
+
+            <div class="viewmorefloating fixed">
+                <a class="scrollmore" href="#more" title="View More">
+                    <img src="/Assets/images/icons/ViewMore.gif" />
+                </a>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+
+                    $(".scrollmore").click(function (event) {
+                        $('html, body').animate({ scrollTop: '+=630px' }, 500);
+                        return false;
+                    });
+
+                    $(window).scroll(function () {
+                        var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+                        if (scrollBottom == 0) {
+                            $('.viewmorefloating.fixed').hide();
+                        } else {
+                            $('.viewmorefloating.fixed').show();
+                        }
+                    });
+                });
+            </script>
+
+
+
+
+
+
+            <div class="page_content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="event_wrapper" class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <ul class="nav panel-tabs">
+                                        <li><a href="#tab1" data-toggle="tab">PREVIOUS</a></li>
+                                        <li class="active"><a href="#tab2" data-toggle="tab">UPCOMING</a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-body">
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane" id="tab1">
+
+                                            <div id="events">
+                                                <div class="yearwrapper">
+                                                    <ul class="event_year col-md-offset-1">
+                                                        <li id="year_2019" class="eventmenu ">
+
+                                                            <span>2019</span>
+                                                        </li>
+                                                        <li id="year_2020" class="eventmenu ">
+
+                                                            <span>2020</span>
+                                                        </li>
+                                                        <li id="year_2021" class="eventmenu ">
+
+                                                            <span>2021</span>
+                                                        </li>
+                                                        <li id="year_2022" class="eventmenu ">
+
+                                                            <span>2022</span>
+                                                        </li>
+                                                        <li id="year_2023" class="eventmenu  active">
+
+                                                            <span>2023</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="event_year_2019" class="event_group">
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>February, 2019</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_38" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2019/11thWCAWorld.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">The 11<sup>th</sup> <b>WCA
+                                                                        Worldwide</b> Conference
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    18 - 22 Feb 2019 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Singapore</strong>: Singapore Convention
+                                                                        and Exhibition Centre (Suntec) <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 2500
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Events/recapWcaworld"
+                                                                        target="_blank">Event Recap</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=64">Photo Gallery</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.youtube.com/watch?v=PdITcx0hvtA"
+                                                                        target="_blank">Highlight Video</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_37" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2019/21Wcafirst.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">The 21<sup>st</sup> <strong>WCA
+                                                                        First Annual</strong> Conference
+
+
+
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    18 - 19 Feb 2019 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Singapore</strong>: Singapore Convention
+                                                                        and Exhibition Centre (Suntec) <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 350
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=63">Photo Gallery</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.youtube.com/watch?v=PdITcx0hvtA"
+                                                                        target="_blank">Highlight Video</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>May, 2019</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_40" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2019/13th_Projects2019.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">The 13<sup>th</sup> <b>WCA
+                                                                        Projects</b> Annual Conference
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    24 - 26 May 2019 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Amsterdam, Netherlands</strong>: Hilton
+                                                                        Amsterdam Hotel <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 175
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Events/ReWcaprojects"
+                                                                        target="_blank">Event Recap</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=65">Photo Gallery</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.youtube.com/watch?v=G0jlmIHZJWM"
+                                                                        target="_blank">Promo Video</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>June, 2019</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_39" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2019/SinoEuropean2019.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name"><b>Sino-European</b>
+                                                                    International Freight Forwarders Conference
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    11 - 14 Jun 2019 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Barcelona, Spain</strong>: WTC Barcelona
+                                                                        & Eurostars Grand Marina <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 350
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Events/RecapSinoEu" target="_blank">Event
+                                                                        Recap</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=66">Photo Gallery</a>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_44" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2019/WSLF2019.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name"><strong>World Specialty</strong>
+                                                                    Logistics Fair
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    14 - 17 Jun 2019 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Barcelona, Spain</strong>: Crowne Plaza
+                                                                        Barcelona Fira Center <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 150
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Events/RecapWSLF" target="_blank">Event
+                                                                        Recap</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=67">Photo Gallery</a>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>October, 2019</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_45" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2019/GAA2019.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">5<sup>th</sup> <b>Global
+                                                                        Affinity Alliance</b> Annual Conference
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    08 - 11 Oct 2019 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Ho Chi Minh City, Vietnam</strong>:
+                                                                        Sheraton Saigon Hotel <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 200
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=71">Photo Gallery</a>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_42" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2019/EglnLogo.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name"><b>EGLN</b> 5<sup>th</sup><b>
+                                                                        AGM
+
+                                                                    </b>
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    13 - 16 Oct 2019 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Ho Chi Minh City, Vietnam</strong>:
+                                                                        Sheraton Saigon Hotel <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 200
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.flickr.com/photos/159972792@N05/collections/72157714311291511/"
+                                                                        target="_blank">Photo Gallery</a>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>November, 2019</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_43" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2019/SinoChinaLogo.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <strong>Sino-International</strong> Freight
+                                                                    Forwarders Conference
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    04 - 07 Nov 2019 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Hong Kong, China</strong>:
+                                                                        AsiaWorld-Expo <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 800
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=72">Photo Gallery</a>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_46" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2019/eComLogo.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name"><strong>WCA eCommerce</strong>
+                                                                    Conference
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    07 - 09 Nov 2019 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Hong Kong, China</strong>: SkyCity
+                                                                        Marriott Hotel <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 150
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=73">Photo Gallery</a>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="event_year_2020" class="event_group">
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>June, 2020</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_63" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2020/GAAVirtual2020.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name"><b>Global Affinity Alliance
+                                                                        Virtual Conference</b><br />
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    23 - 26 Jun 2020 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        This is a VIRTUAL Conference being held online
+                                                                        in real time <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 300
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>October, 2020</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_64" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2020/Lognet2020.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>LOGNET GLOBAL VIRTUAL CONFERENCE</b>
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    12 - 15 Oct 2020 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        This is a VIRTUAL Conference being held online
+                                                                        in real time <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 200
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_65" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2020/egln2020.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name"><b>EGLN VIRTUAL CONFERENCE</b>
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    20 - 23 Oct 2020 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        This is a VIRTUAL Conference being held online
+                                                                        in real time <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 150
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>December, 2020</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_66" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2020/wca2020.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>WCA Worldwide Virtual Conference</b>
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    07 - 11 Dec 2020 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        This is a VIRTUAL Conference being held online
+                                                                        in real time <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 1800
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="event_year_2021" class="event_group">
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>March, 2021</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_70" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2021/SINO2021.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>Sino-International Freight Forwarders</b> Virtual
+                                                                    Conference
+
+
+
+
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    15 - 19 Mar 2021<br />(MOVED FROM JANUARY 2021)
+                                                                </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        This is a VIRTUAL Conference being held online
+                                                                        in real time <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 400
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>June, 2021</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_71" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2021/WCA_Projects2021.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name"><b>WCA Projects</b> Virtual
+                                                                    Conference 2021.
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    01 - 04 Jun 2021 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        This is a VIRTUAL Conference being held online
+                                                                        in real time <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 100
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_69" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2021/lognetVirtual2021.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name"><b>Lognet Global</b> Virtual
+                                                                    Conference 2021
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    14 - 18 Jun 2021 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        This is a VIRTUAL Conference being held online
+                                                                        in real time <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 200
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>November, 2021</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_72" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2021/WCAworld2021.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    WCAworld Virtual Conference
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    08 - 12 Nov 2021 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        This is a VIRTUAL Conference being held online
+                                                                        in real time <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 1800
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="event_year_2022" class="event_group">
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>February, 2022</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_73" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2022/WCAworld ME 2022 G2.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <p><strong>WCAworld Middle East Regional
+                                                                            Conference</strong></p>
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    21 - 24 Feb 2022 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Dubai, UAE</strong>: JW Marriott Marquis
+                                                                        Hotel <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 400
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://conferences.wcaworld.com/MiddleEast2022/video/MiddleEast/MiddleEast.php"
+                                                                        target="_blank">Event Highlights</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=74">Photo Gallery</a>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>April, 2022</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_76" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2022/SINO-2022.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>Sino-International Freight Forwarders Virtual
+                                                                        Conference</b><br /><br />
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    06 - 08 Apr 2022 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        This is a VIRTUAL Conference being held online
+                                                                        in real time <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 400
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>May, 2022</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_75" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2022/WCAProjectsConference2022.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+
+
+                                                                    14<sup>th</sup> WCA Projects Annual Conference
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    13 - 15 May 2022 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Amsterdam, Netherlands</strong>: Hilton
+                                                                        Amsterdam Hotel <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: TBA
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.wcaprojects.com/Pressroom/Details?ID=19077&amp;type=Broadcast"
+                                                                        target="_blank">Event Recap</a>
+                                                                </div>
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.flickr.com/photos/wcaltd/collections/72157720685163518/"
+                                                                        target="_blank">Photo Gallery</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>June, 2022</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_77" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2022/WCA_EU_2022.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>WCAworld European Regional Conference</b>
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    07 - 10 Jun 2022 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Dublin, Ireland</strong>: Convention
+                                                                        Centre Dublin <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 700 (Open
+                                                                        to members of ALL WCAworld networks)
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.flickr.com/photos/wcaltd/collections/72157720761377998/"
+                                                                        target="_blank">Photo Gallery</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>September, 2022</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_78" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2022/lognet.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>Lognet Global Annual Conference</b>
+
+
+
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    05 - 08 Sep 2022 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Pattaya,Thailand</strong>: PEACH <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 300
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.flickr.com/photos/139847863@N04/collections/72157721038685716/"
+                                                                        target="_blank">Photo Gallery</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_79" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2022/gaa.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>GAA Annual Conference</b>
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    05 - 08 Sep 2022 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Pattaya,Thailand</strong>: PEACH <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 300
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.flickr.com/photos/141042016@N05/collections/72157721032431558/?fbclid=IwAR3EmfeFBWxQ7EGRiHARlL3TTSJnzME8re2CuP8ji_KFKNl-naPuSTxYEmY"
+                                                                        target="_blank">Photo Gallery</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_80" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2022/egln.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+
+                                                                    <b>ELITE Annual Conference</b>
+
+
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    05 - 08 Sep 2022 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Pattaya,Thailand</strong>: PEACH <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 120
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.flickr.com/photos/159972792@N05/collections/72157721038346616/"
+                                                                        target="_blank">Photo Gallery</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_85" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2022/WCAAsia.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>WCA Asia Conference 2022
+                                                                    </b>
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    05 - 08 Sep 2022 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Pattaya,Thailand</strong>: PEACH <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 350
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.flickr.com/photos/wcaltd/collections/72157721034253749/"
+                                                                        target="_blank">Photo Gallery</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_84" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2022/eComLogo.jpg"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>WCA eCommerce</b> Virtual Conference
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    29 - 30 Sep 2022 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        This is a VIRTUAL Conference being held online
+                                                                        in real time <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 150
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="event_year_2023" class="event_group">
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>February, 2023</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_81" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2023/WCAFirstCONF2023.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name"><b>WCA First Conference</b>
+
+
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    16 - 18 Feb 2023 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Singapore</strong>: Pan Pacific
+                                                                        Singapore <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 250
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://conferences.wcaworld.com/WCAfirst2023/info/downloadFrm.php"
+                                                                        target="_blank">eDirectory</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=77">Photo Gallery</a>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_82" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2023/WCAWorldCONF2023.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>WCA Worldwide Conference
+
+
+
+
+                                                                    </b>
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    18 - 22 Feb 2023 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Singapore</strong>: Sands Expo &
+                                                                        Convention Center (Marina Bay Sands) <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 3000
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://conferences.wcaworld.com/WCAworld2023/info/downloadFrm.php"
+                                                                        target="_blank">eDirectory</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/Gallery?categoryId=78">Photo Gallery</a>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.youtube.com/watch?v=a8fysKNxU8U"
+                                                                        target="_blank">Highlight Video</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>May, 2023</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_87" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2023/lognet2023.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+
+
+                                                                    <b>Lognet Global </b>Annual Conference
+
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    15 - 18 May 2023 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>JW Marriott Marquis Hotel</strong>:
+                                                                        Dubai <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 300
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://conference.lognetglobal.com/Lognet2023/info/downloadFrm.php"
+                                                                        target="_blank">eDirectory</a>
+                                                                </div>
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.flickr.com/photos/139847863@N04/albums"
+                                                                        target="_blank">Photo Gallery</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>June, 2023</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_88" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2023/WCAProjects2023.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name"><b>WCA Projects</b> Annual
+                                                                    Conference
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    01 - 03 Jun 2023 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Radisson Blu Astrid Antwerp
+                                                                            Hotel</strong>: Antwerp <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 150
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://conferences.wcaworld.com/WCAProjects2023/info/downloadFrm.php"
+                                                                        target="_blank">eDirectory</a>
+                                                                </div>
+
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.flickr.com/photos/wcaltd/collections/72157721804741406/"
+                                                                        target="_blank">Photo Gallery</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_83" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2023/WSLF2023.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">
+                                                                    <b>WCAworld Specialty Logistics Fair
+                                                                    </b>
+
+
+
+
+
+
+
+                                                                </div>
+                                                                <div class="event_date">
+                                                                    12 - 15 Jun 2023 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>InterContinental Miami Hotel</strong>:
+                                                                        Miami <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: 170
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="https://www.wslogisticsfair.com/WSLF2023/info/downloadFrm.php"
+                                                                        target="_blank">eDirectory</a>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <h2 class="event_month"><span>August, 2023</span></h2>
+                                                    <div class="clear"></div>
+                                                    <div class="col-md-12 row">
+                                                        <div id="event_entry_98" class="event_entry">
+                                                            <div class="col-md-3 col-xs-12 event_logo">
+                                                                <img src="/common/images/conference_logo/2023/RoadshowCanada.png"
+                                                                    class="img-responsive" />
+                                                            </div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <div class="event_name">WCAworld Roadshow in Canada 22,
+                                                                    24 August 2023</div>
+                                                                <div class="event_date">
+                                                                    22 - 24 Aug 2023 </div>
+                                                                <div class="event_venue">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_venue"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        Toronto Airport Marriott Hotel and Le Centre
+                                                                        Sheraton Montreal Hotel <br />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_amount">
+                                                                    <div class="col-md-1 col-xs-2">
+                                                                        <span class="icon_amount"></span>
+                                                                    </div>
+                                                                    <div class="col-md-11 col-xs-10">
+                                                                        <strong>Expected Attendance</strong>: N/A
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="event_link col-md-6">
+                                                                    <a href="/EventsRegistration/RoadshowCanada"
+                                                                        target="_blank">Register</a>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="tab-pane active" id="tab2">
+
+                                            <div class="yearwrapper">
+                                                <ul class="event_year col-md-offset-1">
+                                                    <li> <span>All upcoming events</span></li>
+
+                                                </ul>
+                                            </div>
+
+                                            <div class="event_group active">
+                                                <div class="clear"></div>
+
+                                                <div class="clear"></div>
+                                                <h2 class="event_month"><span>September, 2023</span></h2>
+                                                <div class="clear"></div>
+                                                <div class="col-md-12 row">
+                                                    <div id="event_entry_89" class="event_entry">
+                                                        <div class="col-md-3 col-xs-12 event_logo">
+                                                            <img src="/common/images/conference_logo/2023/sino2023.png"
+                                                                class="img-responsive" />
+                                                        </div>
+                                                        <div class="col-md-9 col-xs-12">
+                                                            <div class="event_name"><b>Sino-International</b> Freight
+                                                                Forwarders Conference
+
+
+
+
+
+
+
+
+                                                            </div>
+                                                            <div class="event_date">
+                                                                11 - 14 Sep 2023 </div>
+                                                            <div class="event_venue">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_venue"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>AsiaWorld-Expo, Hong Kong</strong>: China
+                                                                    <br />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_amount">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_amount"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Expected Attendance</strong>: 1500
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_link col-md-6">
+                                                                <a href="https://www.sinoconference.com/sino2023/"
+                                                                    target="_blank">Register</a>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 row">
+                                                    <div id="event_entry_97" class="event_entry">
+                                                        <div class="col-md-3 col-xs-12 event_logo">
+                                                            <img src="/common/images/conference_logo/2023/wpa2023.png"
+                                                                class="img-responsive" />
+                                                        </div>
+                                                        <div class="col-md-9 col-xs-12">
+                                                            <div class="event_name">The 1<sup>st</sup> <strong>World
+                                                                    Parcel Alliance</strong> Annual Conference
+
+
+                                                            </div>
+                                                            <div class="event_date">
+                                                                14 - 16 Sep 2023 </div>
+                                                            <div class="event_venue">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_venue"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Marriott SkyCity Hotel</strong>: Hong Kong
+                                                                    <br />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_amount">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_amount"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Expected Attendance</strong>: 120
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_link col-md-6">
+                                                                <a href="https://conference.worldparcelalliance.com/WPA2023/info/"
+                                                                    target="_blank">Register</a>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="clear"></div>
+                                                <h2 class="event_month"><span>October, 2023</span></h2>
+                                                <div class="clear"></div>
+                                                <div class="col-md-12 row">
+                                                    <div id="event_entry_90" class="event_entry">
+                                                        <div class="col-md-3 col-xs-12 event_logo">
+                                                            <img src="/common/images/conference_logo/2023/GAA2023.png"
+                                                                class="img-responsive" />
+                                                        </div>
+                                                        <div class="col-md-9 col-xs-12">
+                                                            <div class="event_name"><b>Global Affinity Alliance</b>
+                                                                Annual Conference
+
+
+
+
+                                                            </div>
+                                                            <div class="event_date">
+                                                                01 - 04 Oct 2023 </div>
+                                                            <div class="event_venue">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_venue"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Hilton Cartagena</strong>: Cartagena <br />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_amount">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_amount"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Expected Attendance</strong>: 350
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_link col-md-6">
+                                                                <a href="https://conference.globalaffinityalliance.com/GAA2023/info/"
+                                                                    target="_blank">Register</a>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 row">
+                                                    <div id="event_entry_91" class="event_entry">
+                                                        <div class="col-md-3 col-xs-12 event_logo">
+                                                        </div>
+                                                        <div class="col-md-9 col-xs-12">
+                                                            <div class="event_name">
+                                                                <b>WCA Africa Regional </b>Conference <font
+                                                                    color=#990000>(Cancelled)
+                                                                </font>
+                                                            </div>
+                                                            <div class="event_date">
+                                                                17 - 20 Oct 2023 </div>
+                                                            <div class="event_venue">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_venue"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Venue TBA</strong>: Marrakesh <br />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_amount">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_amount"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Expected Attendance</strong>: 600
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-1 col-xs-2">
+                                                                <span class="icon_web"></span>
+                                                            </div>
+                                                            <div class="event_link col-md-6">
+                                                                TBA </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="col-md-12 row">
+                                                    <div id="event_entry_94" class="event_entry">
+                                                        <div class="col-md-3 col-xs-12 event_logo">
+                                                            <img src="/common/images/conference_logo/2023/IFC82023.png"
+                                                                class="img-responsive" />
+                                                        </div>
+                                                        <div class="col-md-9 col-xs-12">
+                                                            <div class="event_name">
+                                                                <b>IFC8</b> 6th ANNUAL CONFERENCE 2023
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                            </div>
+                                                            <div class="event_date">
+                                                                24 - 26 Oct 2023 </div>
+                                                            <div class="event_venue">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_venue"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Corinthia Prague</strong>: Prague <br />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_amount">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_amount"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Expected Attendance</strong>: 120
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_link col-md-6">
+                                                                <a href="https://conference.ifc8.network/IFC82023/info/"
+                                                                    target="_blank">Register</a>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 row">
+                                                    <div id="event_entry_92" class="event_entry">
+                                                        <div class="col-md-3 col-xs-12 event_logo">
+                                                            <img src="/common/images/conference_logo/2023/EGLN2023.png"
+                                                                class="img-responsive" />
+                                                        </div>
+                                                        <div class="col-md-9 col-xs-12">
+                                                            <div class="event_name">
+                                                                <b>ELITE Annual </b>Conference
+
+
+
+                                                            </div>
+                                                            <div class="event_date">
+                                                                28 - 31 Oct 2023 </div>
+                                                            <div class="event_venue">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_venue"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Bangkok Marriott Marquis Queens
+                                                                        Park</strong>: Bangkok <br />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_amount">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_amount"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Expected Attendance</strong>: 150
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_link col-md-6">
+                                                                <a href="https://conference.elitegln.com/EGLN2023/info/"
+                                                                    target="_blank">Register</a>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <h2 class="event_month"><span>February, 2024</span></h2>
+                                                <div class="clear"></div>
+                                                <div class="col-md-12 row">
+                                                    <div id="event_entry_95" class="event_entry">
+                                                        <div class="col-md-3 col-xs-12 event_logo">
+                                                            <img src="/common/images/conference_logo/2024/wcafirst2024.jpg"
+                                                                class="img-responsive" />
+                                                        </div>
+                                                        <div class="col-md-9 col-xs-12">
+                                                            <div class="event_name">
+                                                                <b>WCA First Conference</b>
+
+
+
+
+
+
+
+                                                            </div>
+                                                            <div class="event_date">
+                                                                24 - 26 Feb 2024 </div>
+                                                            <div class="event_venue">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_venue"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>TBA</strong>: Dubai <br />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_amount">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_amount"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Expected Attendance</strong>: 180
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_link col-md-6">
+                                                                <a href="https://conferences.wcaworld.com/wcafirst2024/info/"
+                                                                    target="_blank">Register</a>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 row">
+                                                    <div id="event_entry_96" class="event_entry">
+                                                        <div class="col-md-3 col-xs-12 event_logo">
+                                                            <img src="/common/images/conference_logo/2024/wcaworld2024.jpg"
+                                                                class="img-responsive" />
+                                                        </div>
+                                                        <div class="col-md-9 col-xs-12">
+                                                            <div class="event_name">
+                                                                <b>WCAworld Worldwide Conference</b>
+
+
+
+
+
+
+
+
+                                                            </div>
+                                                            <div class="event_date">
+                                                                27 Feb - 02 Mar 2024 </div>
+                                                            <div class="event_venue">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_venue"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Dubai World Trade Center</strong>: Dubai
+                                                                    <br />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_amount">
+                                                                <div class="col-md-1 col-xs-2">
+                                                                    <span class="icon_amount"></span>
+                                                                </div>
+                                                                <div class="col-md-11 col-xs-10">
+                                                                    <strong>Expected Attendance</strong>: 4500
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="event_link col-md-6">
+                                                                <a href="https://conferences.wcaworld.com/wcaworld2024/info/"
+                                                                    target="_blank">Register</a>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    $("#event_year_2023").addClass("active");
+
+                    $(".eventmenu").on("click", function (e) {
+                        e.preventDefault();
+                        $('.eventmenu').removeClass('active');
+                        $(this).addClass("active");
+
+                        $('.event_group').removeClass('active');
+                        $("#event_" + $(this).attr('id')).addClass("active");
+                    });
+                });
+            </script>
+        </div>
+        <div class="clear"></div>
+
+
+
+
+
+        <div id="footerpartner" class="">
+            <div class="container">
+                <h2 class="titlesection" style="margin-bottom:20px">SUPPORTERS</h2>
+                <div class="partner_row">
+                    <div class="entry">
+                        <a href="https://www.iagcargo.com/" title="www.iagcargo.com" target="_blank">
+                            <img src="/Assets/images/footer/partners/IAGCargo.png" class="img-responsive" />
+                        </a>
+                    </div>
+                    <div class="entry">
+                        <a href="https://www.voiceoftheindependent.com/" title="www.voiceoftheindependent.com"
+                            target="_blank">
+                            <img src="/Assets/images/footer/partners/VoiceIndependent.png" class="img-responsive" />
+                        </a>
+                    </div>
+                    <div class="entry">
+                        <a href="http://theloadstar.co.uk/" title="theloadstar.co.uk" target="_blank">
+                            <img src="/Assets/images/footer/partners/TheLoadStar.png" class="img-responsive" />
+                        </a>
+                    </div>
+                    <div class="entry">
+                        <a href="http://www.lojistikhatti.com/" title="www.lojistikhatti.com" target="_blank">
+                            <img src="/Assets/images/footer/partners/UTALogistik.png" class="img-responsive" />
+                        </a>
+                    </div>
+                    <div class="entry">
+                        <a href="http://www.breakbulk.com" title="www.breakbulk.com" target="_blank">
+                            <img src="/Assets/images/footer/partners/Breakbulk.png" class="img-responsive" />
+                        </a>
+                    </div>
+                    <div class="entry">
+                        <a href="http://www.intuitivelogisticresources.com/" title="www.intuitivelogisticresources.com"
+                            target="_blank">
+                            <img src="/Assets/images/footer/partners/IntuitiveLogistic.png" class="img-responsive" />
+                        </a>
+                    </div>
+                    <div class="entry">
+                        <a href="http://www.ncbfaa.org/" title="www.ncbfaa.org" target="_blank">
+                            <img src="/Assets/images/footer/partners/NCBFAA.png" class="img-responsive" />
+                        </a>
+                    </div>
+                    <div class="entry">
+                        <a href="http://www.freightdeadbeats.com/" title="www.freightdeadbeats.com" target="_blank">
+                            <img src="/Assets/images/footer/partners/FreightDeadbeats.png" class="img-responsive" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer">
+            <div id="footeroption" class="footer_row">
+                <div class="container">
+                    <div id="footer_brand_logo" class="col-md-4 col-md-12">
+                        <div class="icon_entry">
+                            <a href="https://www.wcaworld.com" title="www.wcaworld.com">
+                                <img src="/Assets/images/footer/icons/WCAWorld_Footer.png" class="img-responsive" />
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div id="social_footer" class="col-md-3 col-md-12">
+                        <div id="social_wrapper">
+                            <span class="social_entry"><a target="_blank" href="http://www.facebook.com/WCALtd"
+                                    class="icon_facebook" title="www.facebook.com"></a></span>
+                            <span class="social_entry"><a target="_blank"
+                                    href="https://www.linkedin.com/company/wca-family-of-logistic-networks"
+                                    class="icon_linkedin" title="www.linkedin.com"></a></span>
+                            <span class="social_entry"><a target="_blank" href="https://twitter.com/wca_world"
+                                    class="icon_twitter" title="twitter.com"></a></span>
+                            <span class="social_entry"><a target="_blank"
+                                    href="https://www.youtube.com/channel/UCQPnYRh1XEwOLR-SHKal2rg/videos"
+                                    class="icon_youtube" title="www.youtube.com"></a></span>
+                            <span class="social_entry"><a target="_blank"
+                                    href="https://www.flickr.com/photos/wcaltd/albums" class="icon_flickr"
+                                    title="www.flickr.com"></a></span>
+                            <span class="social_entry"><a target="_blank" href="https://www.weibo.com/chinawca"
+                                    class="icon_weibo" title="www.weibo.com"></a></span>
+                        </div>
+                    </div>
+
+                    <div id="privacy_footer" class="col-md-5 col-md-12">
+                        <a href="/ResourceCenter">Resource Center</a> |
+                        <a href="/Privacy">Privacy policy</a> |
+                        <a href="/static/downloads/wca/WCA-Terms-and-Conditions.pdf" target="_blank">Terms &amp;
+                            Conditions</a> |
+                        <a href="/CSR">CSR</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footermenu" class="footer_row">
+                <div class="container">
+                    <div id="footerabout" class="footer_entry col-md-3">
+                        <h2 class="footer_title">ABOUT WCAworld</h2>
+                        <div class="footer_desc">
+                            <h3>
+
+                                WCAworld is the world’s largest and
+                                most powerful network of
+                                independent freight forwarders,
+                                with over 12,060 member offices in 196
+                                countries worldwide.
+                                The combined logistics might of the WCAworld membership exceeds
+                                that of the world’s largest multinational freight forwarders.
+
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="footer_entry col-md-3">
+                        <h2 class="footer_title">BENEFITS</h2>
+                        <div class="footer_desc">
+                            <ul>
+                                <li><a href="/Benefits/GlobalReach">Global reach</a></li>
+                                <li><a href="/Benefits/ConferencesEvent">Networking and Events</a></li>
+                                <li><a href="/Benefits/FinancialProtection">Financial Protection</a></li>
+                                <li><a href="/Benefits/PartnerPay">PartnerPay</a></li>
+                                <li><a href="/Benefits/MarketingPromotion">Marketing and Promotion</a></li>
+                                <li><a href="/Benefits/CustomerService">Customer Service</a></li>
+                                <li><a href="http://www.worldinsuranceagency.com/" target="_blank">World Insurance
+                                        Service (WIS)</a></li>
+                                <li><a href="/Benefits/Aws">All World Shipping (AWS)</a></li>
+                                <li><a href="/Benefits/USACourier">Courier Program</a></li>
+                                <li><a href="/Benefits/FreightOscope">FreightOscope</a></li>
+                                <li><a href="/Benefits/WCAAcademy">WCAworld Academy</a></li>
+                                <li><a href="/Benefits/WCAworldQuotation">WCAworld Quotation System</a></li>
+                                <li><a href="/Benefits/WCAworldICE">WCAworld ICE</a></li>
+                                <li><a href="/Benefits/WCAworldFX">WCAworld FX</a></li>
+                                <li><a href="/Benefits/VoiceofTheIndependent">Voice of The Independent</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer_entry col-md-3">
+                        <h2 class="footer_title">NETWORKS</h2>
+                        <div class="footer_desc">
+                            <ul>
+                                <li><a href="http://www.wcafirst.com" target="_blank">WCA First</a></li>
+                                <li><a href="http://www.wcaadvancedprofessionals.com" target="_blank">WCA Advanced
+                                        Professionals</a></li>
+                                <li><a href="http://www.wcachinaglobal.com" target="_blank">WCA China Global</a></li>
+                                <li><a href="http://www.wcainterglobal.com" target="_blank">WCA Inter Global</a></li>
+                                <li><a href="http://www.wcaprojects.com" target="_blank">WCA Projects</a></li>
+                                <li><a href="http://www.wcadangerousgoods.com" target="_blank">WCA Dangerous Goods</a>
+                                </li>
+                                <li><a href="http://www.wcaperishables.com" target="_blank">WCA Perishables</a></li>
+                                <li><a href="http://www.wcatimecritical.com" target="_blank">WCA Time Critical</a></li>
+                                <li><a href="http://www.wcapharma.com" target="_blank">WCA Pharma</a></li>
+                                <li><a href="http://www.wcarelocations.com" target="_blank">WCA Relocations</a></li>
+                                <li><a href="http://www.wcavendors.com" target="_blank">WCA Vendors</a></li>
+                                <li><a href="https://www.wcaecommerce.com/" target="_blank">WCA eCommerce</a></li>
+                                <li><a href="https://www.wcacouriernetwork.com/" target="_blank">WCA Courier</a></li>
+                                <li><a href="https://www.lognetglobal.com/" target="_blank">Lognet Global by
+                                        WCAworld</a></li>
+                                <li><a href="https://www.globalaffinityalliance.com/" target="_blank">Global Affinity
+                                        Alliance by WCAworld</a></li>
+                                <li><a href="https://www.elitegln.com/" target="_blank">EGLN by WCAworld</a></li>
+                                <li><a href="https://ifc8.network/" target="_blank">InFinite Connection (IFC8)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer_entry col-md-3">
+                        <h2 class="footer_title">CONTACTS</h2>
+                        <div class="footer_desc">
+                            <ul>
+                                <li><a href="/Contact/Staff">WCAworld Staff</a></li>
+                                <li><a href="/Contact/Regions">Regional Service Centers</a></li>
+                                <li><a href="mailto:info@wcaworld.com">Email WCAworld</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="go-top">Go Top</a>
+    </div>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZ9S90YR0R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JZ9S90YR0R');
+    </script>
+
+
+</body>
+
+</html>
